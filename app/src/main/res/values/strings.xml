@@ -1,3 +1,50 @@
 <resources>
     <string name="app_name">TTAndroid</string>
+    <string-array name="dw_titles">
+        <item>Membership</item>
+        <item>Profile Name</item>
+        <item>Change Email</item>
+        <item>Reset Password</item>
+        <item>Billing Information</item>
+        <item>Text Notifications</item>
+        <item>Email Notifications</item>
+        <item>App Notifications</item>
+        <item>Helpdesk</item>
+        <item>Report A Bug</item>
+        <item>Feedback</item>
+        <item>Privacy Policy</item>
+        <item>Log Out</item>
+    </string-array>
+
+    <string-array name="dw_descriptions">
+        <item>Choose between our free or premium membership.</item>
+        <item>Edit your profile name here.</item>
+        <item>Change your email here.</item>
+        <item>Reset your password here.</item>
+        <item>Update your billing information.</item>
+        <item>Receive text message reminders about events you are interested in.</item>
+        <item>Receive email reminders about events you are interested in.</item>
+        <item>Set personal reminders about event dates, locations, times, etc.</item>
+        <item>Contact our support team about issues you have encountered.</item>
+        <item>Report bugs you may have come across in TownToday.</item>
+        <item>Come give us your feedback on TownToday.</item>
+        <item>Privacy Policy.</item>
+        <item>Log Out.</item>
+    </string-array>
+
+    <string-array name="dw_links">
+        <item>Details</item>
+        <item>Edit</item>
+        <item>Edit</item>
+        <item>Edit</item>
+        <item>Details</item>
+        <item>Switch</item>
+        <item>Switch</item>
+        <item>Details</item>
+        <item>Details</item>
+        <item>Details</item>
+        <item>Details</item>
+        <item>View</item>
+        <item>Logout</item>
+    </string-array>
 </resources>
