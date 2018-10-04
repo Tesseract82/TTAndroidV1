@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -46,12 +47,18 @@ public class DrawerRecyclerAdapter extends RecyclerView.Adapter{
     @Override
     public void onViewRecycled(@NonNull RecyclerView.ViewHolder holder) {
         ((SettingsItemHolder) holder).RHSViewContainer.removeAllViews();
+        ((SettingsItemHolder) holder).subitemTitle.setTextSize(20);
         super.onViewRecycled(holder);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: called");
+
+        //Makes first item (username) bigger
+        if(settingsSubitemTitles.get(position).equals("Username")){
+            ((SettingsItemHolder) holder).subitemTitle.setTextSize(28);
+        }
 
         ((SettingsItemHolder) holder).subitemDescription.setText(settingsSubitemDescriptions.get(position));
         ((SettingsItemHolder) holder).subitemTitle.setText(settingsSubitemTitles.get(position));
@@ -64,19 +71,26 @@ public class DrawerRecyclerAdapter extends RecyclerView.Adapter{
             RHSswitch.setChecked(false);
             RHSswitch.setLayoutParams(flp);
             rightViewContainer.addView(RHSswitch);
+        } else if(settingsSubitemLinks.get(position).equals("Username")) {
+            ImageView RHSavatar = new ImageView(mContext);
+            RHSavatar.setImageResource(R.drawable.fullsizerender);
+            RHSavatar.setAdjustViewBounds(true);
+            RHSavatar.setLayoutParams(flp);
+            rightViewContainer.addView(RHSavatar);
         } else {
-            TextView RHStext = new TextView(mContext);
-            RHStext.setText(settingsSubitemLinks.get(position));
-            RHStext.setTextSize(20);
-            RHStext.setTextColor(Color.parseColor("#1348c4"));
-            RHStext.setLayoutParams(flp);
-            RHStext.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(mContext, ((SettingsItemHolder) holder).subitemTitle.getText().toString(), Toast.LENGTH_SHORT).show();
-                }
-            });
-            rightViewContainer.addView(RHStext);
+            //TODO: links components below
+//            TextView RHStext = new TextView(mContext);
+//            RHStext.setText(settingsSubitemLinks.get(position));
+//            RHStext.setTextSize(20);
+//            RHStext.setTextColor(Color.parseColor("#1348c4"));
+//            RHStext.setLayoutParams(flp);
+//            RHStext.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Toast.makeText(mContext, ((SettingsItemHolder) holder).subitemTitle.getText().toString(), Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//            rightViewContainer.addView(RHStext);
         }
     }
 

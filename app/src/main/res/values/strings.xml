@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TTAndroid</string>
     <string-array name="dw_titles">
+        <item>Username</item>
         <item>Membership</item>
         <item>Profile Name</item>
         <item>Change Email</item>
@@ -17,6 +18,7 @@
     </string-array>
 
     <string-array name="dw_descriptions">
+        <item>Username</item>
         <item>Choose between our free or premium membership.</item>
         <item>Edit your profile name here.</item>
         <item>Change your email here.</item>
@@ -33,6 +35,7 @@
     </string-array>
 
     <string-array name="dw_links">
+        <item>Username</item>
         <item>Details</item>
         <item>Edit</item>
         <item>Edit</item>
@@ -47,4 +50,7 @@
         <item>View</item>
         <item>Logout</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

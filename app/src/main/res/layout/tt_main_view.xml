@@ -9,13 +9,15 @@
     tools:context=".MainActivity">
 
     <include
-        layout="@layout/tt_action_bar"
+        layout="@layout/tt_act_bar"
         android:id="@+id/tt_top_bar" />
 
     <FrameLayout
+        android:id="@+id/fragment_area"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
 
 
     </FrameLayout>
